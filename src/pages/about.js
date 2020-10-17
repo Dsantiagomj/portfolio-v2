@@ -13,6 +13,7 @@ import SimpleLegal from "../images/companies/simple-legal.jpg"
 import Colorbeats from "../images/companies/colorbeats.png"
 import Koombea from "../images/companies/koombea.png"
 import Powerpay from "../images/companies/powerpay.png"
+import Zemoga from "../images/companies/zemoga-logo-grey.png"
 
 import HorusHotel from "../images/projects/horushotel.png"
 import Shopylive from "../images/projects/shopylive.png"
@@ -323,6 +324,13 @@ const About = ({ location: { pathname } }) => {
               <img
                 alt="Koombea"
                 src={Koombea}
+                style={{ margin: 0, maxHeight: 125 }}
+              />
+            </Company>
+            <Company>
+              <img
+                alt="Zemoga"
+                src={Zemoga}
                 style={{ margin: 0, maxHeight: 125 }}
               />
             </Company>
