@@ -6,7 +6,7 @@ import styled from "styled-components"
 import successIcon from "../images/success.svg"
 
 const SendedFormWrapper = styled.div`
-  animation: fadeInAnimation ease 1s;
+  animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   align-items: center;
