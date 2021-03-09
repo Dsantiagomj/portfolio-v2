@@ -5,12 +5,9 @@ import styled from "styled-components"
 import { AiOutlineMail, AiOutlineLinkedin, AiFillGithub } from "react-icons/ai"
 import { RiGatsbyLine } from "react-icons/ri"
 
-import LogoImage from "../images/white_logo.png"
+import Container from "../components/container"
 
-const Container = styled.div`
-  background: #00343d;
-  padding: 4rem 0;
-`
+import LogoImage from "../images/white_logo.png"
 
 const Card = styled.div`
   align-items: center;
@@ -143,7 +140,7 @@ const Footer = ({ location }) => {
   const currentYear = date.getFullYear()
 
   return (
-    <Container>
+    <Container backgroundColor="#00343d" padding="4rem 0">
       {location !== "/contact" && (
         <Card>
           <CardTitle>Start a project</CardTitle>

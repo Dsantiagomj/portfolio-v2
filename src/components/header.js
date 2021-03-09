@@ -5,26 +5,9 @@ import styled from "styled-components"
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"
 
 import Drawer from "./drawer"
+import Container from "./container"
 
 import LogoImage from "../images/black_logo.png"
-
-const Container = styled.div`
-  align-items: center;
-  background: white;
-  display: flex;
-  height: 5rem;
-  justify-content: space-between;
-  margin: 0 auto;
-  margin-bottom: 1.45rem;
-  max-width: 80rem;
-  padding: 0 0.5rem;
-  padding-top: 3rem;
-  width: 100%;
-  zindex: 3;
-  @media (min-width: 1024px) {
-    padding-top: 2.5rem;
-  }
-`
 
 const Menu = styled.ul`
   display: none;
@@ -78,9 +61,23 @@ const ResponsiveButton = styled.button`
 const Header = () => {
   // responsive navbar status
   const [navbarStatus, setNavbarStatus] = useState(false)
+  const responsiveStyles = {
+    "padding-top": "2.5rem",
+  }
 
   return (
-    <Container>
+    <Container
+      alignItems="center"
+      backgroundColor="white"
+      display="flex"
+      height="5rem"
+      margin="0 auto 1.45rem"
+      maxWidth="80rem"
+      padding="3rem 0 0.5rem"
+      width="100%"
+      zIndex={3}
+      responsiveStyles={responsiveStyles}
+    >
       <Link
         to="/"
         style={{

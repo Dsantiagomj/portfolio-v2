@@ -8,23 +8,12 @@ import { GoBrowser } from "react-icons/go"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Container from "../components/container"
 
 import image from "../images/hero.svg"
 import avatar from "../images/avatar.svg"
 import hoverAvatar from "../images/hover_avatar.svg"
 
-const Container = styled.div`
-  background-color: ${props => (props.darkBackground ? "#20C98B" : "white")};
-  margin: 0 auto;
-  min-height: ${props => (props.darkBackground ? "34rem" : "46rem")};
-  padding: 2rem;
-  padding-bottom: 0;
-  width: 100vw;
-`
-
-const CenteredContainer = styled(Container)`
-  display: flex;
-`
 const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 80rem;
@@ -200,7 +189,14 @@ const IndexPage = ({ location: { pathname } }) => {
   return (
     <Layout location={pathname}>
       <SEO title="Home" />
-      <Container>
+      <Container
+        backgroundColor="white"
+        margin="0 auto"
+        minHeight="46rem"
+        height="auto"
+        padding="2rem 2rem 0 2rem"
+        width="100vw"
+      >
         <Wrapper>
           <Title> {TitleText} </Title>
           <Subtitle>
@@ -213,7 +209,15 @@ const IndexPage = ({ location: { pathname } }) => {
           </ImgWrapper>
         </Wrapper>
       </Container>
-      <CenteredContainer darkBackground>
+      <Container
+        backgroundColor="#20c98b"
+        display="flex"
+        margin="0 auto"
+        minHeight="34rem"
+        height="auto"
+        padding="2rem 2rem 0 2rem"
+        width="100vw"
+      >
         <CenteredWrapper>
           <SectionTitle colored>
             Hi, I'm Santiago. Pleasure to meet you.
@@ -227,8 +231,15 @@ const IndexPage = ({ location: { pathname } }) => {
             during my journey.
           </SectionText>
         </CenteredWrapper>
-      </CenteredContainer>
-      <Container>
+      </Container>
+      <Container
+        backgroundColor="white"
+        margin="0 auto"
+        minHeight="46rem"
+        height="auto"
+        padding="2rem 2rem 0 2rem"
+        width="100vw"
+      >
         <Wrapper>
           <Card>
             <CardColumn>

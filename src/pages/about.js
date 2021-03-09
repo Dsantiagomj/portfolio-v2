@@ -6,6 +6,7 @@ import { GoTools } from "react-icons/go"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Container from "../components/container"
 
 import HorusSC from "../images/companies/horus-sc.svg"
 import ElaSustentable from "../images/companies/ela-sustentable.png"
@@ -17,13 +18,6 @@ import Zemoga from "../images/companies/zemoga-logo-grey.png"
 
 import HorusHotel from "../images/projects/horushotel.png"
 import Shopylive from "../images/projects/shopylive.png"
-
-const Container = styled.div`
-  background-color: white;
-  margin: 0 auto;
-  min-height: 46rem;
-  width: 100vw;
-`
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -139,7 +133,13 @@ const About = ({ location: { pathname } }) => {
   return (
     <Layout location={pathname}>
       <SEO title="About" />
-      <Container>
+      <Container
+        backgroundColor="white"
+        height="auto"
+        margin="0 auto"
+        minHeight="46rem"
+        width="100vw"
+      >
         <Wrapper>
           <SectionTitle>My Work</SectionTitle>
           <SectionSubtitle>
