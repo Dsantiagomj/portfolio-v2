@@ -33,7 +33,37 @@ const { pageTitle, title, description } = Astro.props;
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle} - Daniel Santiago MJ</title>
+    <title>{pageTitle} - Daniel Santiago MJ | Web developer portfolio</title>
+    <meta name="description" content="Discover Daniel Santiago Muñoz Jaramillo, a skilled web developer main focused on the frontend with leading and teaching experience." />
+    <meta name="author" content="Daniel Santiago Muñoz" />
+    <meta name="author" content="dsantiagomj" />
+    <link rel="canonical" href="https://www.dsantiagomj.dev/" />
+    <meta name="keywords" content="Frontend Developer, Web Developer Portfolio, Daniel Santiago Muñoz Jaramillo Portfolio." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Daniel Santiago MJ | Web developer portfolio" />
+    <meta property="og:description" content="Explore Daniel Santiago MJ's professional portfolio showcasing innovative web design and development projects." />
+    <meta property="og:url" content="https://www.dsantiagomj.dev/" />
+    <meta property="og:type" content="website" />
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Daniel Santiago Muñoz Jaramillo",
+      "url": "https://www.dsantiagomj.dev/",
+      "sameAs": [
+        "https://www.linkedin.com/in/dsantiagomj",
+        "https://github.com/dsantiagomj",
+        "https://twitter.com/dsmunozj"
+      ],
+      "jobTitle": "Frontend Developer & Web Developer",
+      "image": "https://www.dsantiagomj.dev/profile.jpg",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Zemoga"
+      }
+    }
+  </script>
+
   </head>
   <body>
       <Navbar client:load/>
