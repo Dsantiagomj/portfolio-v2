@@ -1,13 +1,16 @@
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-    <h1>404 not found</h1>
-	</body>
-</html>
-
+--- 
+import { Button } from "@/components/ui/button"
+import BaseLayout from '@/layouts/BaseLayout.astro'
+const pageTitle = '404 not found'
+const heroTitle = 'Oops an error ocurred'
+const heroDescription = "The page you're looking for was not found."
+--- 
+<BaseLayout pageTitle={pageTitle} title={heroTitle} description={heroDescription}>
+  <div class="container text-center">
+    <a href="/"> 
+      <Button variant="link">
+        Go back home 
+      </Button>
+    </a>
+  </div>
+</BaseLayout>
