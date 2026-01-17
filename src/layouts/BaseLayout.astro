@@ -27,8 +27,17 @@ const {
             ? "dark"
             : "light";
     };
-    const isDark = getThemePreference() === "dark";
-    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+    const applyTheme = () => {
+        const isDark = getThemePreference() === "dark";
+        document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+    };
+
+    // Apply theme on initial load
+    applyTheme();
+
+    // Re-apply theme after View Transitions
+    document.addEventListener('astro:after-swap', applyTheme);
 
     if (typeof localStorage !== "undefined") {
         const observer = new MutationObserver(() => {
