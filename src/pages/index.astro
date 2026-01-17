@@ -9,47 +9,49 @@ const heroTitle='< Hello world />'
 const heroDescription=" I'm a web developer based in Colombia"
 --- 
 <BaseLayout pageTitle={pageTitle} title={heroTitle} description={heroDescription}>
-  <div class="container md:flex mx-auto max-w-xl px-4 py-2 mb-4 items-center justify-between">
-    <section class="mr-2 pr-6">
-      <h2 class="text-3xl font-bold"> Daniel Santiago MJ</h2>
-      <p class="text-justify">
+  <section aria-labelledby="profile-heading" class="container md:flex mx-auto max-w-xl py-8 mb-8 items-center justify-between gap-6">
+    <div class="flex-1">
+      <h2 id="profile-heading" class="text-3xl font-bold mb-2">Daniel Santiago MJ</h2>
+      <p class="text-base">
         Passionate digital craftsman always learning something new.
       </p>
-    </section>
-    <section class="flex justify-center ml-2 mx-auto" >
-      <img src="/profile.png" alt="profile picture" class="max-w-24 rounded-full border-2 dark:border-slate-900 border-slate-200 "/>
-    </section>
-  </div>
-  <div class="container mx-auto max-w-xl text-center">
-      <h2 class="text-2xl text-start font-bold mb-2"> Intro</h2>
-      <p class="pl-2 text-justify">
+    </div>
+    <div class="flex justify-center mt-4 md:mt-0">
+      <img src="/profile.png" alt="profile picture" class="w-24 h-24 rounded-full border-2 border-border"/>
+    </div>
+  </section>
+  <section aria-labelledby="intro-heading" class="container mx-auto max-w-xl py-8 mb-8">
+      <h2 id="intro-heading" class="text-2xl font-bold mb-4">Intro</h2>
+      <div class="space-y-6">
+        <p class="text-base leading-relaxed">
           I&apos;m a software developer based in Barranquilla, Colombia with a passion for
           building digital services/stuff. A fan of learning and
           interacting with new technologies. When I&apos;m not online, I love to
           play videogames, play football and spend time with my dogs and cat.
-    </p>
-    <h3 class="text-lg font-bold mt-3 mb-2">
-      Learn more about me
-    </h3>
-    <section class="flex justify-evenly mx-auto items-center flex-col md:flex-row gap-2">
-      <a class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="https://docs.google.com/document/d/1gNzzFDvFDE_7reufsQt8Oqi4ozO_--AHzdryvmtXcXA/export?format=pdf">
-        Download CV <Download size={16} />
-      </a>
-      <span>or</span>
-      <a class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="/about">
-        Check profile <ChevronRight size={16} />
-      </a>
-    </section>
-  </div>
-  <div class="container text-center mx-auto max-w-xl py-2 mt-8">
-    <h2 class="text-2xl text-start font-bold mb-2">
+        </p>
+        <div>
+          <p class="text-lg font-semibold mb-4">Learn more about me</p>
+          <div class="flex items-center flex-col md:flex-row gap-3">
+            <a class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="https://docs.google.com/document/d/1gNzzFDvFDE_7reufsQt8Oqi4ozO_--AHzdryvmtXcXA/export?format=pdf">
+              Download CV <Download size={16} />
+            </a>
+            <span class="text-muted-foreground text-sm">or</span>
+            <a class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="/about">
+              Check profile <ChevronRight size={16} />
+            </a>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section aria-labelledby="work-heading" class="container mx-auto max-w-xl py-8 mb-8">
+    <h2 id="work-heading" class="text-2xl font-bold mb-4">
       Work
     </h2>
-    <p class="text-justify pl-2 mb-8">
+    <p class="text-base leading-relaxed mb-8">
       Companies I've worked with and projects I've been involved with as dev and teacher.
       Contact me to learn more about those projects.
     </p>
-    <div class="grid md:grid-cols-3 gap-4 grid-cols-2 mb-2 px-2 items-center justify-items-center">
+    <div class="grid md:grid-cols-3 gap-4 grid-cols-2 items-center justify-items-center">
       <img src="/companies/mb-star.svg" alt="MB-Star logo" class="rounded-lg mb-4"/>
 
       <img src="/companies/monks-white-logo.png" alt="Monks logo dark mode" class="rounded-lg hidden dark:block mb-4"/>
@@ -67,38 +69,40 @@ const heroDescription=" I'm a web developer based in Colombia"
       <img src="/companies/makeitreal-white.png" alt="Make it real  logo dark mode" class="rounded-lg hidden dark:block mb-2"/>
       <img src="/companies/makeitreal.png" alt="Make it real  logo light mode" class="rounded-lg block dark:hidden mb-2"/>
     </div>
-  </div>
-  <div class="container text-center mx-auto max-w-xl py-2 mt-4">
-    <h2 class="text-2xl text-start font-bold mb-2">
+  </section>
+  <section aria-labelledby="contact-heading" class="container mx-auto max-w-xl py-8 mb-8">
+    <h2 id="contact-heading" class="text-2xl font-bold mb-4">
       Say hi
     </h2>
-    <p class="text-justify pl-2">
+    <p class="text-base leading-relaxed mb-6">
       You have a project in mind or just want to say hi? Feel free to drop me a message.
     </p>
     <a class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="/contact">
       Get in touch <ChevronRight size={16} />
     </a>
-  </div>
-  <div class="container mx-auto max-w-xl py-2 my-4">
-    <h2 class="text-2xl text-start font-bold mb-2">
+  </section>
+  <section aria-labelledby="social-heading" class="container mx-auto max-w-xl py-8">
+    <h2 id="social-heading" class="text-2xl font-bold mb-4">
       Online
-    </h2> 
-    <ul class="pl-2 pt-2">
-      <li class="mb-1">
-        <a class="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="mailto:dsantiagomj@gmail.com">
-          <Mail size={16} /> Mail
-        </a>
-      </li>
-      <li class="mb-1">
-        <a class="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="https://www.linkedin.com/in/dsantiagomj" target="_blank" rel="noopener noreferrer">
-          <Linkedin size={16} /> Linkedin
-        </a>
-      </li>
-      <li>
-        <a class="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="https://github.com/Dsantiagomj" target="_blank" rel="noopener noreferrer">
-          <Github size={16} /> Github
-        </a>
-      </li>
-    </ul> 
-  </div>
+    </h2>
+    <nav aria-label="Social media links">
+      <ul class="space-y-2">
+        <li>
+          <a class="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="mailto:dsantiagomj@gmail.com">
+            <Mail size={16} /> Mail
+          </a>
+        </li>
+        <li>
+          <a class="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="https://www.linkedin.com/in/dsantiagomj" target="_blank" rel="noopener noreferrer">
+            <Linkedin size={16} /> Linkedin
+          </a>
+        </li>
+        <li>
+          <a class="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="https://github.com/Dsantiagomj" target="_blank" rel="noopener noreferrer">
+            <Github size={16} /> Github
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </section>
 </BaseLayout>

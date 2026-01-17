@@ -66,12 +66,15 @@ const { pageTitle, title, description } = Astro.props;
 
   </head>
   <body>
+      <a href="#main-content" class="sr-only">
+        Skip to main content
+      </a>
       <Navbar client:load/>
-    <div class="pl-4 pr-4 container mx-auto max-w-3xl">
+    <main id="main-content" class="pl-4 pr-4 container mx-auto max-w-3xl">
         <Hero title={title} description={description}/>
         <slot />
         <Footer/>
-      </div>
+      </main>
   </body>
 </html>
 
