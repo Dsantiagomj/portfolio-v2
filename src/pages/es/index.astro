@@ -34,7 +34,7 @@ const description =
 >
     <section
         aria-labelledby="profile-heading"
-        class="container md:flex mx-auto max-w-xl py-12 mb-8 items-center justify-between gap-6"
+        class="container md:flex mx-auto max-w-xl py-12 mb-8 items-center justify-between gap-6 animate-on-scroll animate-fade-in-up"
     >
         <div class="flex-1">
             <h1 id="profile-heading" class="mb-3">Daniel Santiago MJ</h1>
@@ -58,7 +58,7 @@ const description =
     </section>
     <section
         aria-labelledby="intro-heading"
-        class="container mx-auto max-w-xl py-8 mb-8"
+        class="container mx-auto max-w-xl py-8 mb-8 animate-on-scroll animate-fade-in-up"
     >
         <h2 id="intro-heading" class="mb-4">Introducción</h2>
         <div class="space-y-6">
@@ -72,14 +72,14 @@ const description =
                 <p class="text-lg font-semibold mb-4">Conoce más sobre mí</p>
                 <div class="flex items-center flex-col md:flex-row gap-3">
                     <a
-                        class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 button-press"
                         href="https://docs.google.com/document/d/1gNzzFDvFDE_7reufsQt8Oqi4ozO_--AHzdryvmtXcXA/export?format=pdf"
                     >
                         Descargar CV <Download size={16} />
                     </a>
                     <span class="text-muted-foreground text-sm">o</span>
                     <a
-                        class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 button-press"
                         href="/es/about"
                     >
                         Ver perfil <ChevronRight size={16} />
@@ -90,7 +90,7 @@ const description =
     </section>
     <section
         aria-labelledby="work-heading"
-        class="container mx-auto max-w-xl py-8 mb-8"
+        class="container mx-auto max-w-xl py-8 mb-8 animate-on-scroll animate-fade-in-up"
     >
         <h2 id="work-heading" class="mb-4">Trabajo</h2>
 
@@ -188,7 +188,7 @@ const description =
                     href="https://mercedes-benz.alemanaautomotriz.com.co/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="block transition-all duration-200 hover:shadow-lg hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
+                    class="block animate-on-scroll animate-scale-in card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
                 >
                     <Card className="h-full">
                         <CardHeader>
@@ -234,7 +234,7 @@ const description =
                     href="https://monksflow.ai/home/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="block transition-all duration-200 hover:shadow-lg hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
+                    class="block animate-on-scroll animate-scale-in card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
                 >
                     <Card className="h-full">
                         <CardHeader>
@@ -286,7 +286,7 @@ const description =
                     href="https://github.com/Dsantiagomj/DSMJ-Ai-Toolkit"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="block transition-all duration-200 hover:shadow-lg hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
+                    class="block animate-on-scroll animate-scale-in card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
                 >
                     <Card className="h-full">
                         <CardHeader>
@@ -330,7 +330,7 @@ const description =
                     href="https://colorbeats.co"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="block transition-all duration-200 hover:shadow-lg hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
+                    class="block animate-on-scroll animate-scale-in card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
                 >
                     <Card className="h-full">
                         <CardHeader>
@@ -382,14 +382,14 @@ const description =
     </section>
     <section
         aria-labelledby="contact-heading"
-        class="container mx-auto max-w-xl py-8 mb-8"
+        class="container mx-auto max-w-xl py-8 mb-8 animate-on-scroll animate-fade-in-up"
     >
         <h2 id="contact-heading" class="mb-4">Di hola</h2>
         <p class="text-base leading-relaxed mb-6">
             ¿Tienes un proyecto en mente o solo quieres saludar? Envíame un mensaje.
         </p>
         <a
-            class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 button-press"
             href="/es/contact"
         >
             Contáctame <ChevronRight size={16} />
@@ -397,7 +397,7 @@ const description =
     </section>
     <section
         aria-labelledby="social-heading"
-        class="container mx-auto max-w-xl py-8"
+        class="container mx-auto max-w-xl py-8 animate-on-scroll animate-fade-in-up"
     >
         <h2 id="social-heading" class="mb-4">Conectemos</h2>
         <nav aria-label="Social media links">

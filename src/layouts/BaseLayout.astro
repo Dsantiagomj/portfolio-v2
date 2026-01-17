@@ -5,6 +5,7 @@ import { ViewTransitions } from "astro:transitions";
 import Hero from "@/components/Hero.astro";
 import Footer from "@/components/Footer.astro";
 import { Navbar } from "@/components/Navbar.jsx";
+import ScrollAnimations from "@/components/ScrollAnimations.astro";
 import Analytics from "@vercel/analytics/astro";
 
 const {
@@ -150,6 +151,7 @@ const {
             <slot />
             <Footer />
         </main>
+        <ScrollAnimations />
         <Analytics />
     </body>
 </html>

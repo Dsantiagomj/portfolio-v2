@@ -80,7 +80,7 @@ export function ContactForm() {
 
   return (
     <div className="container">
-      <Card className="text-left mb-6 mt-8">
+      <Card className="text-left mb-6 mt-8 animate-on-scroll animate-fade-in-up card-hover">
         <form className="mt-8" onSubmit={handleSubmit}>
           <CardHeader>
             <CardTitle>Send me a message!</CardTitle>
@@ -162,7 +162,7 @@ export function ContactForm() {
             </div>
           </CardContent>
           <CardFooter className="flex-col items-center gap-4">
-            <Button type="submit" disabled={status === "submitting"} aria-busy={status === "submitting"}>
+            <Button type="submit" disabled={status === "submitting"} aria-busy={status === "submitting"} className="button-press">
               {status === "submitting" ? "Sending..." : "Shoot me a message"}
             </Button>
             {message && status !== "error" && (
