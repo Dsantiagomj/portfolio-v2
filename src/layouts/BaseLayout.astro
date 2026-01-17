@@ -1,9 +1,10 @@
---- 
+---
 import "@/styles/global.css"
 
 import Hero from "@/components/Hero.astro"
 import Footer from "@/components/Footer.astro"
 import { Navbar } from "@/components/Navbar.jsx"
+import { Analytics } from '@vercel/analytics/astro'
 
 const { pageTitle, title, description } = Astro.props;
 --- 
@@ -75,6 +76,7 @@ const { pageTitle, title, description } = Astro.props;
         <slot />
         <Footer/>
       </main>
+      <Analytics />
   </body>
 </html>
 
