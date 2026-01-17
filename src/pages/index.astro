@@ -1,6 +1,6 @@
---- 
+---
 import BaseLayout from '@/layouts/BaseLayout.astro'
-
+import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 import { ChevronRight, Download, Github, Linkedin, Mail } from 'lucide-react'
@@ -9,42 +9,44 @@ const heroTitle='< Hello world />'
 const heroDescription=" I'm a web developer based in Colombia"
 --- 
 <BaseLayout pageTitle={pageTitle} title={heroTitle} description={heroDescription}>
-  <section aria-labelledby="profile-heading" class="container md:flex mx-auto max-w-xl py-8 mb-8 items-center justify-between gap-6">
+  <section aria-labelledby="profile-heading" class="container md:flex mx-auto max-w-xl py-12 mb-8 items-center justify-between gap-6">
     <div class="flex-1">
-      <h2 id="profile-heading" class="text-3xl font-bold mb-2">Daniel Santiago MJ</h2>
-      <p class="text-base">
+      <h1 id="profile-heading" class="mb-3">Daniel Santiago MJ</h1>
+      <p class="text-lg text-muted-foreground">
         Passionate digital craftsman always learning something new.
       </p>
     </div>
-    <div class="flex justify-center mt-4 md:mt-0">
-      <img src="/profile.png" alt="profile picture" class="w-24 h-24 rounded-full border-2 border-border"/>
+    <div class="flex justify-center mt-6 md:mt-0">
+      <img src="/profile.png" alt="profile picture" class="w-28 h-28 rounded-full border-2 border-border" loading="eager"/>
     </div>
   </section>
   <section aria-labelledby="intro-heading" class="container mx-auto max-w-xl py-8 mb-8">
-      <h2 id="intro-heading" class="text-2xl font-bold mb-4">Intro</h2>
-      <div class="space-y-6">
-        <p class="text-base leading-relaxed">
-          I&apos;m a software developer based in Barranquilla, Colombia with a passion for
-          building digital services/stuff. A fan of learning and
-          interacting with new technologies. When I&apos;m not online, I love to
-          play videogames, play football and spend time with my dogs and cat.
-        </p>
-        <div>
-          <p class="text-lg font-semibold mb-4">Learn more about me</p>
-          <div class="flex items-center flex-col md:flex-row gap-3">
-            <a class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="https://docs.google.com/document/d/1gNzzFDvFDE_7reufsQt8Oqi4ozO_--AHzdryvmtXcXA/export?format=pdf">
-              Download CV <Download size={16} />
-            </a>
-            <span class="text-muted-foreground text-sm">or</span>
-            <a class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="/about">
-              Check profile <ChevronRight size={16} />
-            </a>
+      <h2 id="intro-heading" class="mb-4">Intro</h2>
+      <Card>
+        <CardContent className="pt-6 space-y-6">
+          <p class="text-base leading-relaxed">
+            I&apos;m a software developer based in Barranquilla, Colombia with a passion for
+            building digital services/stuff. A fan of learning and
+            interacting with new technologies. When I&apos;m not online, I love to
+            play videogames, play football and spend time with my dogs and cat.
+          </p>
+          <div>
+            <p class="text-lg font-semibold mb-4">Learn more about me</p>
+            <div class="flex items-center flex-col md:flex-row gap-3">
+              <a class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="https://docs.google.com/document/d/1gNzzFDvFDE_7reufsQt8Oqi4ozO_--AHzdryvmtXcXA/export?format=pdf">
+                Download CV <Download size={16} />
+              </a>
+              <span class="text-muted-foreground text-sm">or</span>
+              <a class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="/about">
+                Check profile <ChevronRight size={16} />
+              </a>
+            </div>
           </div>
-        </div>
-      </div>
+        </CardContent>
+      </Card>
   </section>
   <section aria-labelledby="work-heading" class="container mx-auto max-w-xl py-8 mb-8">
-    <h2 id="work-heading" class="text-2xl font-bold mb-4">
+    <h2 id="work-heading" class="mb-4">
       Work
     </h2>
     <p class="text-base leading-relaxed mb-8">
@@ -52,26 +54,26 @@ const heroDescription=" I'm a web developer based in Colombia"
       Contact me to learn more about those projects.
     </p>
     <div class="grid md:grid-cols-3 gap-4 grid-cols-2 items-center justify-items-center">
-      <img src="/companies/mb-star.svg" alt="MB-Star logo" class="rounded-lg mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
+      <img loading="lazy" src="/companies/mb-star.svg" alt="MB-Star logo" class="rounded-lg mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
 
-      <img src="/companies/monks-white-logo.png" alt="Monks logo dark mode" class="rounded-lg hidden dark:block mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
-      <img src="/companies/monks-black-logo.svg" alt="Monks logo light mode" class="rounded-lg block dark:hidden mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
+      <img loading="lazy" src="/companies/monks-white-logo.png" alt="Monks logo dark mode" class="rounded-lg hidden dark:block mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
+      <img loading="lazy" src="/companies/monks-black-logo.svg" alt="Monks logo light mode" class="rounded-lg block dark:hidden mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
 
-      <img src="/companies/zemoga-logo-white.png" alt="zemoga logo dark mode" class="rounded-lg hidden dark:block mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
-      <img src="/companies/zemoga-logo-grey.png" alt="zemoga logo light mode" class="rounded-lg block dark:hidden mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
+      <img loading="lazy" src="/companies/zemoga-logo-white.png" alt="zemoga logo dark mode" class="rounded-lg hidden dark:block mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
+      <img loading="lazy" src="/companies/zemoga-logo-grey.png" alt="zemoga logo light mode" class="rounded-lg block dark:hidden mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
 
-      <img src="/companies/globant-logo-light.png" alt="globant logo dark mode" class="rounded-lg hidden dark:block mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
-      <img src="/companies/globant-logo-dark.svg" alt="globant logo light mode" class="rounded-lg block dark:hidden mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
+      <img loading="lazy" src="/companies/globant-logo-light.png" alt="globant logo dark mode" class="rounded-lg hidden dark:block mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
+      <img loading="lazy" src="/companies/globant-logo-dark.svg" alt="globant logo light mode" class="rounded-lg block dark:hidden mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
 
-      <img src="/companies/koombea-white.svg" alt="koombea logo dark mode" class="rounded-lg hidden dark:block mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
-      <img src="/companies/koombea.svg" alt="koombea logo light mode" class="rounded-lg block dark:hidden mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
+      <img loading="lazy" src="/companies/koombea-white.svg" alt="koombea logo dark mode" class="rounded-lg hidden dark:block mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
+      <img loading="lazy" src="/companies/koombea.svg" alt="koombea logo light mode" class="rounded-lg block dark:hidden mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
 
-      <img src="/companies/makeitreal-white.png" alt="Make it real  logo dark mode" class="rounded-lg hidden dark:block mb-2 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
-      <img src="/companies/makeitreal.png" alt="Make it real  logo light mode" class="rounded-lg block dark:hidden mb-2 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
+      <img loading="lazy" src="/companies/makeitreal-white.png" alt="Make it real  logo dark mode" class="rounded-lg hidden dark:block mb-2 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
+      <img loading="lazy" src="/companies/makeitreal.png" alt="Make it real  logo light mode" class="rounded-lg block dark:hidden mb-2 transition-all duration-200 hover:scale-110 hover:opacity-80"/>
     </div>
   </section>
   <section aria-labelledby="contact-heading" class="container mx-auto max-w-xl py-8 mb-8">
-    <h2 id="contact-heading" class="text-2xl font-bold mb-4">
+    <h2 id="contact-heading" class="mb-4">
       Say hi
     </h2>
     <p class="text-base leading-relaxed mb-6">
@@ -82,7 +84,7 @@ const heroDescription=" I'm a web developer based in Colombia"
     </a>
   </section>
   <section aria-labelledby="social-heading" class="container mx-auto max-w-xl py-8">
-    <h2 id="social-heading" class="text-2xl font-bold mb-4">
+    <h2 id="social-heading" class="mb-4">
       Let's Connect
     </h2>
     <nav aria-label="Social media links">
