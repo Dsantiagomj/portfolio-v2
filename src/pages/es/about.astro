@@ -1,0 +1,347 @@
+---
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardFooter,
+    CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ArrowUpRight } from "lucide-react";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Acerca de";
+const heroTitle = "Acerca de mí";
+const heroDescription = "Conoce más sobre mi trayectoria y experiencia";
+const description = "Conoce a Daniel Santiago Muñoz Jaramillo, un desarrollador de software con casi una década de experiencia en desarrollo frontend, liderazgo de equipos y tecnologías web modernas.";
+---
+
+<BaseLayout
+    pageTitle={pageTitle}
+    title={heroTitle}
+    description={description}
+    heroDescription={heroDescription}
+>
+    <div class="container mx-auto max-w-xl text-center">
+        <section aria-labelledby="profile-heading">
+            <h2 id="profile-heading" class="text-2xl text-start font-bold mb-4">Perfil</h2>
+            <p class="pl-2 text-justify mb-4">
+                Soy un Desarrollador de Software con casi una década de experiencia
+                en diferentes campos dentro de las tecnologías Web, con sólidos
+                conocimientos en desarrollo Front-End, así como experiencia en
+                desarrollo Back-End y Móvil.
+            </p>
+            <p class="pl-2 text-justify mb-4">
+                He liderado equipos de desarrolladores con diferentes niveles de
+                experiencia en el pasado, sacando lo mejor de ellos mismos, construyendo
+                aplicaciones web para diferentes clientes alrededor del mundo, lo que me
+                ha dado una perspectiva completa del desarrollo de productos,
+                convirtiéndome en un profesional integral enfocado en la comprensión
+                del negocio.
+            </p>
+            <p class="pl-2 text-justify mb-4">
+                Con amplia experiencia práctica en diferentes tecnologías, frameworks,
+                patrones y stacks tecnológicos, estoy bien preparado para entender los
+                detalles de soluciones técnicas complejas, así como proponer, expandir y
+                construir sobre ellas.
+            </p>
+            <div
+                class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8"
+            >
+                <Card className="p-4 transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+                    <Badge className="mb-3">Desarrollo frontend</Badge>
+                    <p class="text-sm text-muted-foreground leading-relaxed">
+                        HTML, Javascript, Typescript, React, Svelte, Astro,
+                        NextJS, Vue, Wordpress, Shopify, CSS, Tailwind, SCSS,
+                        BEM
+                    </p>
+                </Card>
+                <Card className="p-4 transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+                    <Badge className="mb-3">Desarrollo backend</Badge>
+                    <p class="text-sm text-muted-foreground leading-relaxed">
+                        NodeJs, Express, Python, Django, Ruby, Ruby on Rails,
+                        PHP, Laravel, Java
+                    </p>
+                </Card>
+                <Card className="p-4 transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+                    <Badge className="mb-3">Desarrollo móvil</Badge>
+                    <p class="text-sm text-muted-foreground leading-relaxed">
+                        Expo, React Native, Apache Cordova
+                    </p>
+                </Card>
+                <Card className="p-4 transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+                    <Badge className="mb-3">Scripting & CI/CD</Badge>
+                    <p class="text-sm text-muted-foreground leading-relaxed">
+                        Bash, Shell, CI/CD (Bitbucket Pipelines, Jenkins, Github
+                        Actions)
+                    </p>
+                </Card>
+                <Card className="p-4 transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+                    <Badge className="mb-3">Bases de datos</Badge>
+                    <p class="text-sm text-muted-foreground leading-relaxed">
+                        MySQL, PostgreSQL, MongoDB, Firebase, GraphQL
+                    </p>
+                </Card>
+                <Card className="p-4 transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+                    <Badge className="mb-3">Habilidades blandas</Badge>
+                    <p class="text-sm text-muted-foreground leading-relaxed">
+                        Agile Methodologies, SCRUM, Team work, Proficient
+                        communication
+                    </p>
+                </Card>
+            </div>
+        </section>
+        <section aria-labelledby="bio-heading">
+            <h2 id="bio-heading" class="text-2xl text-start font-bold mb-2">Biografía</h2>
+            <Card className="mt-6 mb-4">
+                <CardHeader>
+                    <CardTitle className="text-start text-xl"
+                        >Sr Web developer - .Monks</CardTitle
+                    >
+                    <CardDescription className="text-start"
+                        >January 2025 - Current</CardDescription
+                    >
+                </CardHeader>
+                <CardContent className="text-justify">
+                    <ul>
+                        <li class="mb-3 text-sm">
+                            Currently working on a new AI Agent Management and
+                            Interaction Platform designed for workspace
+                            collaboration. It's a sophisticated interface for
+                            discovering, configuring, and conversing with AI
+                            agents that can perform various business tasks.
+                        </li>
+                        <li class="mb-3 text-sm">
+                            Core contributor of the design system package. Built
+                            all the foundational work of the agent-oriented chat
+                            application, including all the chat functionalities
+                            and the widget displaying section.
+                        </li>
+                        <li class="mb-3 text-sm">
+                            In charge of all the frontend technical decisions,
+                            such as libraries, patterns, and architectures
+                            implemented.
+                        </li>
+                    </ul>
+                </CardContent>
+                <CardFooter className="justify-center gap-2 flex-wrap">
+                    <Badge variant="secondary">React</Badge>
+                    <Badge variant="secondary">TypeScript</Badge>
+                    <Badge variant="secondary">NodeJS</Badge>
+                    <Badge variant="secondary">NestJS</Badge>
+                    <Badge variant="secondary">Vite</Badge>
+                </CardFooter>
+            </Card>
+            <Card className="mb-4">
+                <CardHeader>
+                    <CardTitle className="text-start text-xl"
+                        >Technical Lead - Zemoga (Now .Monks)</CardTitle
+                    >
+                    <CardDescription className="text-start">
+                        May 2023 - December 2024</CardDescription
+                    >
+                </CardHeader>
+                <CardContent className="text-justify">
+                    <ul>
+                        <li class="mb-3 text-sm">
+                            Working with a fintech company developing new
+                            software using vue.
+                        </li>
+                        <li class="mb-3 text-sm">
+                            Leading a front-end team taking technical decisions
+                            to build new features from scratch, adding
+                            capabilities and visual enhancements to data
+                            visualization such as charts, excel export and data
+                            representation through tables.
+                        </li>
+                        <li class="mb-3 text-sm">
+                            Create and serve new components package for other
+                            teams consumption and implementation enhanced with
+                            Storybook for playground.
+                        </li>
+                        <li class="mb-3 text-sm">
+                            Connect new components package to main application
+                            through a MFE service.
+                        </li>
+                        <li class="mb-3 text-sm">
+                            Deploy and build new packages versions to serve the
+                            main application using Jenkins and Harness.
+                        </li>
+                        <li class="mb-3 text-sm">
+                            Create and execute design proposals for new
+                            experimental features.
+                        </li>
+                    </ul>
+                </CardContent>
+                <CardFooter className="justify-center gap-2 flex-wrap">
+                    <Badge variant="secondary">Vue</Badge>
+                    <Badge variant="secondary">Nuxt</Badge>
+                    <Badge variant="secondary">NodeJs</Badge>
+                    <Badge variant="secondary">Express</Badge>
+                    <Badge variant="secondary">AWS</Badge>
+                </CardFooter>
+            </Card>
+            <Card className="mb-4">
+                <CardHeader>
+                    <CardTitle className="text-start text-xl"
+                        >Web developer - Globant</CardTitle
+                    >
+                    <CardDescription className="text-start">
+                        May 2022 - April 2023</CardDescription
+                    >
+                </CardHeader>
+                <CardContent className="text-justify">
+                    <ul>
+                        <li class="mb-3 text-sm">
+                            Worked with a fintech company developing client-end
+                            and business-end applications using reactjs.
+                        </li>
+                        <li class="mb-3 text-sm">
+                            Building new features from scratch, updating the
+                            look and feel of the application as a daily basis
+                            work, ensuring accessibility, internationalization,
+                            customization and responsiveness for all the
+                            existing and brand new builded components.
+                        </li>
+                        <li class="mb-3 text-sm">
+                            Monitoring AWS services in productive environments,
+                            troubleshooting low to medium issues.
+                        </li>
+                    </ul>
+                </CardContent>
+                <CardFooter className="justify-center gap-2 flex-wrap">
+                    <Badge variant="secondary">React</Badge>
+                    <Badge variant="secondary">Typescript</Badge>
+                    <Badge variant="secondary">Redux</Badge>
+                    <Badge variant="secondary">AWS</Badge>
+                </CardFooter>
+            </Card>
+            <Card className="mb-4">
+                <CardHeader>
+                    <CardTitle className="text-start text-xl"
+                        >Web developer - Zemoga</CardTitle
+                    >
+                    <CardDescription className="text-start"
+                        >July 2020 - April 2022</CardDescription
+                    >
+                </CardHeader>
+                <CardContent className="text-justify">
+                    <ul>
+                        <li class="mb-3 text-sm">
+                            Worked with a fintech company developing new
+                            software using vue.
+                        </li>
+                        <li class="mb-3 text-sm">
+                            Worked in the standardization team, team in charge
+                            of building and documenting vue components, ensuring
+                            accessibility and responsiveness so other teams
+                            could consume the components library. Developed
+                            notebooks and documented processes and components
+                            created for the company's new initiative using
+                            Jupyterlab and python
+                        </li>
+                        <li class="mb-3 text-sm">
+                            Built and deployed new products focused on funding
+                            and investing money in different areas such as
+                            stocks for different purposes. Migrated services of
+                            a BFF.
+                        </li>
+                    </ul>
+                </CardContent>
+                <CardFooter className="justify-center gap-2 flex-wrap">
+                    <Badge variant="secondary">React</Badge>
+                    <Badge variant="secondary">Vue</Badge>
+                    <Badge variant="secondary">NodeJs</Badge>
+                    <Badge variant="secondary">Express</Badge>
+                    <Badge variant="secondary">Python</Badge>
+                    <Badge variant="secondary">Jupyterlab</Badge>
+                    <Badge variant="secondary">AWS</Badge>
+                </CardFooter>
+            </Card>
+            <Card className="mb-4">
+                <CardHeader>
+                    <CardTitle className="text-start text-xl"
+                        >Frontend developer - Koombea</CardTitle
+                    >
+                    <CardDescription className="text-start"
+                        >October 2019 - July 2020</CardDescription
+                    >
+                </CardHeader>
+                <CardContent className="text-justify">
+                    <ul>
+                        <li class="mb-3 text-sm">
+                            Built a fintech application using react, react hooks
+                            and context api. Implemented Material-UI components
+                            library to upspeed frontend timeline and deliver
+                            faster
+                        </li>
+                        <li class="mb-3 text-sm">
+                            Was in charge of the frontend team, worked with two
+                            frontend developers, taking decisions regarding
+                            technologies to use and project paths. Managed
+                            client expectation regarding frontend, demoed
+                            updates directly to the client.
+                        </li>
+                    </ul>
+                </CardContent>
+                <CardFooter className="justify-center gap-2 flex-wrap">
+                    <Badge variant="secondary">React</Badge>
+                    <Badge variant="secondary">Redux</Badge>
+                    <Badge variant="secondary">Ruby</Badge>
+                    <Badge variant="secondary">Ruby on rails</Badge>
+                </CardFooter>
+            </Card>
+            <Card className="mb-4">
+                <CardHeader>
+                    <CardTitle className="text-start text-xl"
+                        >Frontend/Mobile developer - MCA Systems</CardTitle
+                    >
+                    <CardDescription className="text-start"
+                        >June 2018 - February 2019</CardDescription
+                    >
+                </CardHeader>
+                <CardContent className="text-justify">
+                    <ul>
+                        <li class="mb-3 text-sm">
+                            Added a connection to firebase and google cloud.
+                            Built notification popups service using firebase and
+                            pdf generation for reports.
+                        </li>
+                        <li class="mb-3 text-sm">
+                            Improved deployment process for other company’s
+                            projects by implementing git and gitflow to projects
+                            workflow.
+                        </li>
+                        <li class="mb-3 text-sm">
+                            Worked in different company initiatives maintaining
+                            and improving internal software such as mobile
+                            application built in cordova and company webpages
+                            built with wordpress.
+                        </li>
+                    </ul>
+                </CardContent>
+                <CardFooter className="justify-center gap-2 flex-wrap">
+                    <Badge variant="secondary">React</Badge>
+                    <Badge variant="secondary">Redux</Badge>
+                    <Badge variant="secondary">Cordova</Badge>
+                    <Badge variant="secondary">NodeJs</Badge>
+                    <Badge variant="secondary">Express</Badge>
+                    <Badge variant="secondary">Firebase</Badge>
+                    <Badge variant="secondary">GCP</Badge>
+                </CardFooter>
+            </Card>
+            <a
+                class="flex items-center mb-6"
+                target="_blank"
+                href="https://docs.google.com/document/d/e/2PACX-1vRnXWs7JaRR78ymKf4G4lSbMVP9hz6t01rq5RqSv0Evhral-USzUE1Msa04a7rw329DZ54LuJKVPUqW/pub"
+            >
+                <Button variant="link">
+                    Ver resto de experiencia <ArrowUpRight size={16} />
+                </Button>
+            </a>
+        </section>
+    </div>
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+import { ContactForm } from "@/components/ContactForm";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+const pageTitle = "Contacto";
+const heroTitle = "Hablemos";
+const heroDescription =
+    "Podemos discutir sobre ese proyecto increíble que tienes en mente o simplemente saludarnos";
+const description =
+    "Contacta a Daniel Santiago Muñoz para oportunidades de desarrollo web, colaboraciones o consultorías. Disponible para trabajo freelance y por contrato.";
+---
+
+<BaseLayout
+    pageTitle={pageTitle}
+    title={heroTitle}
+    description={description}
+    heroDescription={heroDescription}
+>
+    <ContactForm />
+</BaseLayout>

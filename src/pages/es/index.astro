@@ -1,0 +1,436 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import {
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle,
+    CardDescription,
+    CardFooter,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+
+import {
+    ChevronRight,
+    Download,
+    Github,
+    Linkedin,
+    Mail,
+    ExternalLink,
+} from "lucide-react";
+const pageTitle = "Inicio";
+const heroTitle = "< Hola mundo />";
+const heroDescription = "Soy un desarrollador web en Colombia";
+const description =
+    "Portafolio de Daniel Santiago Muñoz, Sr Web Developer especializado en React, TypeScript y tecnologías web modernas. Ve proyectos y contacta.";
+---
+
+<BaseLayout
+    pageTitle={pageTitle}
+    title={heroTitle}
+    description={description}
+    heroDescription={heroDescription}
+>
+    <section
+        aria-labelledby="profile-heading"
+        class="container md:flex mx-auto max-w-xl py-12 mb-8 items-center justify-between gap-6"
+    >
+        <div class="flex-1">
+            <h1 id="profile-heading" class="mb-3">Daniel Santiago MJ</h1>
+            <p class="text-lg text-muted-foreground">
+                Artesano digital apasionado, siempre aprendiendo algo nuevo.
+            </p>
+        </div>
+        <div class="flex justify-center mt-6 md:mt-0">
+            <picture>
+                <source srcset="/profile.webp" type="image/webp" />
+                <img
+                    src="/profile.png"
+                    alt="Daniel Santiago Muñoz Jaramillo, Software Developer professional headshot"
+                    class="w-28 h-28 rounded-full border-2 border-border"
+                    loading="eager"
+                    width="112"
+                    height="112"
+                />
+            </picture>
+        </div>
+    </section>
+    <section
+        aria-labelledby="intro-heading"
+        class="container mx-auto max-w-xl py-8 mb-8"
+    >
+        <h2 id="intro-heading" class="mb-4">Introducción</h2>
+        <div class="space-y-6">
+            <p class="text-base leading-relaxed">
+                Soy un desarrollador de software en Barranquilla, Colombia con pasión por
+                construir servicios/productos digitales. Fanático del aprendizaje e
+                interacción con nuevas tecnologías. Cuando no estoy en línea, me encanta
+                jugar videojuegos, fútbol y pasar tiempo con mis perros y gato.
+            </p>
+            <div>
+                <p class="text-lg font-semibold mb-4">Conoce más sobre mí</p>
+                <div class="flex items-center flex-col md:flex-row gap-3">
+                    <a
+                        class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        href="https://docs.google.com/document/d/1gNzzFDvFDE_7reufsQt8Oqi4ozO_--AHzdryvmtXcXA/export?format=pdf"
+                    >
+                        Descargar CV <Download size={16} />
+                    </a>
+                    <span class="text-muted-foreground text-sm">o</span>
+                    <a
+                        class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        href="/es/about"
+                    >
+                        Ver perfil <ChevronRight size={16} />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+        aria-labelledby="work-heading"
+        class="container mx-auto max-w-xl py-8 mb-8"
+    >
+        <h2 id="work-heading" class="mb-4">Trabajo</h2>
+
+        <div class="mb-12">
+            <h3 class="text-xl font-semibold mb-4">
+                Empresas con las que he trabajado
+            </h3>
+            <p class="text-base leading-relaxed mb-6">
+                Organizaciones con las que he tenido el privilegio de trabajar a lo largo de mi carrera.
+            </p>
+            <div
+                class="grid md:grid-cols-3 gap-4 grid-cols-2 items-center justify-items-center"
+            >
+                <img
+                    loading="lazy"
+                    src="/companies/mb-star.svg"
+                    alt="Mercedes-Benz Star - MB-Star automotive partner"
+                    class="rounded-lg mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"
+                />
+
+                <img
+                    loading="lazy"
+                    src="/companies/monks-white-logo.png"
+                    alt=".Monks company logo"
+                    class="rounded-lg hidden dark:block mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"
+                />
+                <img
+                    loading="lazy"
+                    src="/companies/monks-black-logo.svg"
+                    alt=".Monks company logo"
+                    class="rounded-lg block dark:hidden mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"
+                />
+
+                <img
+                    loading="lazy"
+                    src="/companies/zemoga-logo-white.png"
+                    alt="Zemoga company logo"
+                    class="rounded-lg hidden dark:block mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"
+                />
+                <img
+                    loading="lazy"
+                    src="/companies/zemoga-logo-grey.png"
+                    alt="Zemoga company logo"
+                    class="rounded-lg block dark:hidden mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"
+                />
+
+                <img
+                    loading="lazy"
+                    src="/companies/globant-logo-light.png"
+                    alt="Globant company logo"
+                    class="rounded-lg hidden dark:block mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"
+                />
+                <img
+                    loading="lazy"
+                    src="/companies/globant-logo-dark.svg"
+                    alt="Globant company logo"
+                    class="rounded-lg block dark:hidden mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"
+                />
+
+                <img
+                    loading="lazy"
+                    src="/companies/koombea-white.svg"
+                    alt="Koombea company logo"
+                    class="rounded-lg hidden dark:block mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"
+                />
+                <img
+                    loading="lazy"
+                    src="/companies/koombea.svg"
+                    alt="Koombea company logo"
+                    class="rounded-lg block dark:hidden mb-4 transition-all duration-200 hover:scale-110 hover:opacity-80"
+                />
+
+                <img
+                    loading="lazy"
+                    src="/companies/makeitreal-white.png"
+                    alt="Make It Real coding bootcamp logo"
+                    class="rounded-lg hidden dark:block mb-2 transition-all duration-200 hover:scale-110 hover:opacity-80"
+                />
+                <img
+                    loading="lazy"
+                    src="/companies/makeitreal.png"
+                    alt="Make It Real coding bootcamp logo"
+                    class="rounded-lg block dark:hidden mb-2 transition-all duration-200 hover:scale-110 hover:opacity-80"
+                />
+            </div>
+        </div>
+
+        <div>
+            <h3 class="text-xl font-semibold mb-4">Proyectos que he construido</h3>
+            <p class="text-base leading-relaxed mb-6">
+                Proyectos públicos seleccionados a los que he contribuido o construido desde cero.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a
+                    href="https://mercedes-benz.alemanaautomotriz.com.co/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block transition-all duration-200 hover:shadow-lg hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
+                >
+                    <Card className="h-full">
+                        <CardHeader>
+                            <div
+                                class="flex items-start justify-between gap-2 mb-2"
+                            >
+                                <CardTitle className="text-start text-lg"
+                                    >Mercedes-Benz Alemana Automotriz</CardTitle
+                                >
+                                <ExternalLink
+                                    size={18}
+                                    className="text-muted-foreground flex-shrink-0"
+                                />
+                            </div>
+                            <CardDescription
+                                className="text-start flex items-center gap-2"
+                            >
+                                <img
+                                    src="/companies/mb-star.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    class="w-5 h-5 object-contain"
+                                />
+                                Alemana Automotriz
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <p
+                                class="text-sm text-muted-foreground leading-relaxed"
+                            >
+                                Sitio web de concesionario galardonado, reconocido como la mejor presencia digital de Mercedes-Benz en Colombia. Construido con tecnologías modernas y mantenido con mejoras continuas.
+                            </p>
+                        </CardContent>
+                        <CardFooter className="justify-start gap-2 flex-wrap">
+                            <Badge variant="secondary">Astro</Badge>
+                            <Badge variant="secondary">TypeScript</Badge>
+                            <Badge variant="secondary">AWS Lambda</Badge>
+                        </CardFooter>
+                    </Card>
+                </a>
+
+                <a
+                    href="https://monksflow.ai/home/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block transition-all duration-200 hover:shadow-lg hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
+                >
+                    <Card className="h-full">
+                        <CardHeader>
+                            <div
+                                class="flex items-start justify-between gap-2 mb-2"
+                            >
+                                <CardTitle className="text-start text-lg"
+                                    >MonksFlow.ai</CardTitle
+                                >
+                                <ExternalLink
+                                    size={18}
+                                    className="text-muted-foreground flex-shrink-0"
+                                />
+                            </div>
+                            <CardDescription
+                                className="text-start flex items-center gap-2"
+                            >
+                                <img
+                                    src="/companies/monks-black-logo.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    class="w-5 h-5 object-contain block dark:hidden"
+                                />
+                                <img
+                                    src="/companies/monks-white-logo.png"
+                                    alt=""
+                                    aria-hidden="true"
+                                    class="w-5 h-5 object-contain hidden dark:block"
+                                />
+                                .Monks
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <p
+                                class="text-sm text-muted-foreground leading-relaxed"
+                            >
+                                Plataforma empresarial de IA que permite a los equipos descubrir, configurar y colaborar con agentes inteligentes. Liderando la arquitectura frontend y la implementación del sistema de diseño.
+                            </p>
+                        </CardContent>
+                        <CardFooter className="justify-start gap-2 flex-wrap">
+                            <Badge variant="secondary">React</Badge>
+                            <Badge variant="secondary">TypeScript</Badge>
+                            <Badge variant="secondary">NestJS</Badge>
+                        </CardFooter>
+                    </Card>
+                </a>
+
+                <a
+                    href="https://github.com/Dsantiagomj/DSMJ-Ai-Toolkit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block transition-all duration-200 hover:shadow-lg hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
+                >
+                    <Card className="h-full">
+                        <CardHeader>
+                            <div
+                                class="flex items-start justify-between gap-2 mb-2"
+                            >
+                                <CardTitle className="text-start text-lg"
+                                    >DSMJ AI Toolkit</CardTitle
+                                >
+                                <ExternalLink
+                                    size={18}
+                                    className="text-muted-foreground flex-shrink-0"
+                                />
+                            </div>
+                            <CardDescription
+                                className="text-start flex items-center gap-2"
+                            >
+                                <Github
+                                    size={16}
+                                    className="text-muted-foreground"
+                                />
+                                Open Source
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <p
+                                class="text-sm text-muted-foreground leading-relaxed"
+                            >
+                                Toolkit de IA listo para producción que extiende Claude Code con agentes y habilidades especializadas. Contribución de código abierto a la comunidad de desarrolladores con enfoque en automatización y productividad.
+                            </p>
+                        </CardContent>
+                        <CardFooter className="justify-start gap-2 flex-wrap">
+                            <Badge variant="secondary">Claude Code</Badge>
+                            <Badge variant="secondary">AI Agents</Badge>
+                            <Badge variant="secondary">TypeScript</Badge>
+                        </CardFooter>
+                    </Card>
+                </a>
+
+                <a
+                    href="https://colorbeats.co"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block transition-all duration-200 hover:shadow-lg hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
+                >
+                    <Card className="h-full">
+                        <CardHeader>
+                            <div
+                                class="flex items-start justify-between gap-2 mb-2"
+                            >
+                                <CardTitle className="text-start text-lg"
+                                    >ColorBeats</CardTitle
+                                >
+                                <ExternalLink
+                                    size={18}
+                                    className="text-muted-foreground flex-shrink-0"
+                                />
+                            </div>
+                            <CardDescription
+                                className="text-start flex items-center gap-2"
+                            >
+                                <img
+                                    src="/companies/colorbeats.png"
+                                    alt=""
+                                    aria-hidden="true"
+                                    class="w-5 h-5 object-contain block dark:hidden"
+                                />
+                                <img
+                                    src="/companies/colorbeats-white.png"
+                                    alt=""
+                                    aria-hidden="true"
+                                    class="w-5 h-5 object-contain hidden dark:block"
+                                />
+                                Marca de Maquillaje
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <p
+                                class="text-sm text-muted-foreground leading-relaxed"
+                            >
+                                Plataforma de e-commerce personalizada en Shopify con plantillas avanzadas de Liquid para gestión completa de inventario y clientes. Diseñada para escalabilidad y experiencia de marca fluida.
+                            </p>
+                        </CardContent>
+                        <CardFooter className="justify-start gap-2 flex-wrap">
+                            <Badge variant="secondary">Shopify</Badge>
+                            <Badge variant="secondary">Liquid</Badge>
+                            <Badge variant="secondary">E-commerce</Badge>
+                        </CardFooter>
+                    </Card>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section
+        aria-labelledby="contact-heading"
+        class="container mx-auto max-w-xl py-8 mb-8"
+    >
+        <h2 id="contact-heading" class="mb-4">Di hola</h2>
+        <p class="text-base leading-relaxed mb-6">
+            ¿Tienes un proyecto en mente o solo quieres saludar? Envíame un mensaje.
+        </p>
+        <a
+            class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            href="/es/contact"
+        >
+            Contáctame <ChevronRight size={16} />
+        </a>
+    </section>
+    <section
+        aria-labelledby="social-heading"
+        class="container mx-auto max-w-xl py-8"
+    >
+        <h2 id="social-heading" class="mb-4">Conectemos</h2>
+        <nav aria-label="Social media links">
+            <ul class="space-y-2">
+                <li>
+                    <a
+                        class="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        href="mailto:dsantiagomj@gmail.com"
+                    >
+                        <Mail size={16} /> Correo
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        href="https://www.linkedin.com/in/dsantiagomj"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Linkedin size={16} /> Linkedin
+                    </a>
+                </li>
+                <li>
+                    <a
+                        class="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        href="https://github.com/Dsantiagomj"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Github size={16} /> Github
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+</BaseLayout>

@@ -3,6 +3,7 @@ import * as React from "react"
 import { Menu, Code, CodeXml } from "lucide-react"
 
 import { ModeToggle } from "@/components/ModeToggle.jsx"
+import { LanguageSwitcher } from "@/components/LanguageSwitcher.jsx"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -32,7 +33,7 @@ export function Navbar() {
               </span>
             </a>
           </div>
-          <div className="hidden lg:flex justify-around ">
+          <div className="hidden lg:flex justify-around items-center gap-4">
             <ul className="flex justify-evenly w-52 min-w-52 items-center">
               <li>
                 <a href="/about" className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
@@ -45,12 +46,12 @@ export function Navbar() {
                 </a>
               </li>
             </ul>
+            <LanguageSwitcher />
             <ModeToggle />
           </div>
-          <div className="lg:hidden flex">
-            <div className="mr-2">
-              <ModeToggle />
-            </div>
+          <div className="lg:hidden flex items-center gap-2">
+            <LanguageSwitcher />
+            <ModeToggle />
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="icon">

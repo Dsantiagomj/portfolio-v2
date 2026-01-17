@@ -1,0 +1,96 @@
+{
+  "site": {
+    "title": "Daniel Santiago MJ | Web Developer Portfolio",
+    "description": "Professional portfolio of Daniel Santiago Muñoz Jaramillo"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "< Hello world />",
+      "description": "I'm a web developer based in Colombia"
+    },
+    "profile": {
+      "heading": "Daniel Santiago MJ",
+      "tagline": "Passionate digital craftsman always learning something new."
+    },
+    "intro": {
+      "heading": "Intro",
+      "paragraph": "I'm a software developer based in Barranquilla, Colombia with a passion for building digital services/stuff. A fan of learning and interacting with new technologies. When I'm not online, I love to play videogames, play football and spend time with my dogs and cat.",
+      "learn_more": "Learn more about me",
+      "download_cv": "Download CV",
+      "check_profile": "Check profile"
+    },
+    "work": {
+      "heading": "Work",
+      "companies": {
+        "heading": "Companies I've worked with",
+        "description": "Organizations I've had the privilege to work with throughout my career."
+      },
+      "projects": {
+        "heading": "Projects I've built",
+        "description": "Selected public projects I've contributed to or built from scratch."
+      }
+    },
+    "contact": {
+      "heading": "Say hi",
+      "description": "You have a project in mind or just want to say hi? Feel free to drop me a message.",
+      "cta": "Get in touch"
+    },
+    "social": {
+      "heading": "Let's Connect"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About me",
+      "description": "Learn more about my journey and experience"
+    },
+    "profile": {
+      "heading": "Profile",
+      "paragraph1": "I'm Software Developer with almost a decade of experience in different fields within Web technologies, with a solid background in Front-End development, as well as experience in Back-End, and Mobile development.",
+      "paragraph2": "Led teams of developers with different levels of seniority in the past, into getting the most out of themselves, building web applications for different clients across the globe giving me a complete perspective of product development making me an integral professional focused on business understanding.",
+      "paragraph3": "With hands-on extensive experience in different technologies, frameworks, patterns and tech stacks, I'm well suited to understand the details of complex technical solutions, as well as propose, expand and build on top of them."
+    },
+    "bio": {
+      "heading": "Bio",
+      "check_rest": "Check rest of experience"
+    },
+    "skills": {
+      "frontend": "Frontend development",
+      "backend": "Backend development",
+      "mobile": "Mobile development",
+      "cicd": "Scripting & CI/CD",
+      "databases": "Databases",
+      "soft": "Soft skills"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Let's talk",
+      "description": "We can discuss about that amazing project in mind or simply say hi"
+    },
+    "form": {
+      "title": "Send me a message!",
+      "intro1": "Dropping a line to say hi, or see if we can build something amazing together? I'd love to hear from you!",
+      "intro2": "Fill in your info in the form below and I look forward to hearing from you!",
+      "name_label": "Your name",
+      "name_placeholder": "Enter your name",
+      "email_label": "Your email",
+      "email_placeholder": "Enter your email",
+      "message_label": "Your message",
+      "message_placeholder": "Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?",
+      "submit": "Shoot me a message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! I'll get back to you soon.",
+      "error": "Failed to send message. Please try again.",
+      "validation_error": "Please fix the errors below",
+      "name_error": "Please enter your name (at least 2 characters)",
+      "email_error": "Please enter a valid email address",
+      "message_error": "Please enter a message (at least 10 characters)"
+    }
+  }
+}

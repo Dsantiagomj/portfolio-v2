@@ -1,6 +1,7 @@
 ---
 import "@/styles/global.css";
 
+import { ViewTransitions } from "astro:transitions";
 import Hero from "@/components/Hero.astro";
 import Footer from "@/components/Footer.astro";
 import { Navbar } from "@/components/Navbar.jsx";
@@ -123,11 +124,12 @@ const {
                 ]
             }
         </script>
+        <ViewTransitions />
     </head>
     <body>
         <a href="#main-content" class="sr-only"> Skip to main content </a>
         <Navbar client:idle />
-        <main id="main-content" class="pl-4 pr-4 container mx-auto max-w-3xl">
+        <main id="main-content" class="pl-4 pr-4 container mx-auto max-w-3xl" transition:animate="fade">
             <Hero title={title} description={heroDescription} />
             <slot />
             <Footer />

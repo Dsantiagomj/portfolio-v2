@@ -1,0 +1,96 @@
+{
+  "site": {
+    "title": "Daniel Santiago MJ | Portafolio de Desarrollador Web",
+    "description": "Portafolio profesional de Daniel Santiago Muñoz Jaramillo"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "home": {
+    "hero": {
+      "title": "< Hola mundo />",
+      "description": "Soy un desarrollador web en Colombia"
+    },
+    "profile": {
+      "heading": "Daniel Santiago MJ",
+      "tagline": "Artesano digital apasionado, siempre aprendiendo algo nuevo."
+    },
+    "intro": {
+      "heading": "Introducción",
+      "paragraph": "Soy un desarrollador de software en Barranquilla, Colombia con pasión por construir servicios/productos digitales. Fanático del aprendizaje e interacción con nuevas tecnologías. Cuando no estoy en línea, me encanta jugar videojuegos, fútbol y pasar tiempo con mis perros y gato.",
+      "learn_more": "Conoce más sobre mí",
+      "download_cv": "Descargar CV",
+      "check_profile": "Ver perfil"
+    },
+    "work": {
+      "heading": "Trabajo",
+      "companies": {
+        "heading": "Empresas con las que he trabajado",
+        "description": "Organizaciones con las que he tenido el privilegio de trabajar a lo largo de mi carrera."
+      },
+      "projects": {
+        "heading": "Proyectos que he construido",
+        "description": "Proyectos públicos seleccionados a los que he contribuido o construido desde cero."
+      }
+    },
+    "contact": {
+      "heading": "Di hola",
+      "description": "¿Tienes un proyecto en mente o solo quieres saludar? Envíame un mensaje.",
+      "cta": "Contáctame"
+    },
+    "social": {
+      "heading": "Conectemos"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Acerca de mí",
+      "description": "Conoce más sobre mi trayectoria y experiencia"
+    },
+    "profile": {
+      "heading": "Perfil",
+      "paragraph1": "Soy un Desarrollador de Software con casi una década de experiencia en diferentes campos dentro de las tecnologías Web, con sólidos conocimientos en desarrollo Front-End, así como experiencia en desarrollo Back-End y Móvil.",
+      "paragraph2": "He liderado equipos de desarrolladores con diferentes niveles de experiencia en el pasado, sacando lo mejor de ellos mismos, construyendo aplicaciones web para diferentes clientes alrededor del mundo, lo que me ha dado una perspectiva completa del desarrollo de productos, convirtiéndome en un profesional integral enfocado en la comprensión del negocio.",
+      "paragraph3": "Con amplia experiencia práctica en diferentes tecnologías, frameworks, patrones y stacks tecnológicos, estoy bien preparado para entender los detalles de soluciones técnicas complejas, así como proponer, expandir y construir sobre ellas."
+    },
+    "bio": {
+      "heading": "Biografía",
+      "check_rest": "Ver resto de experiencia"
+    },
+    "skills": {
+      "frontend": "Desarrollo frontend",
+      "backend": "Desarrollo backend",
+      "mobile": "Desarrollo móvil",
+      "cicd": "Scripting y CI/CD",
+      "databases": "Bases de datos",
+      "soft": "Habilidades blandas"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Hablemos",
+      "description": "Podemos discutir sobre ese proyecto increíble que tienes en mente o simplemente saludarnos"
+    },
+    "form": {
+      "title": "¡Envíame un mensaje!",
+      "intro1": "¿Quieres saludar o ver si podemos construir algo increíble juntos? ¡Me encantaría saber de ti!",
+      "intro2": "Completa tu información en el formulario y espero con ansias tu mensaje!",
+      "name_label": "Tu nombre",
+      "name_placeholder": "Ingresa tu nombre",
+      "email_label": "Tu correo",
+      "email_placeholder": "Ingresa tu correo",
+      "message_label": "Tu mensaje",
+      "message_placeholder": "Hola, creo que necesitamos un sistema de diseño para nuestros productos en la Empresa X. ¿Qué tan pronto podemos hablar sobre esto?",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado exitosamente! Te responderé pronto.",
+      "error": "Error al enviar el mensaje. Por favor intenta de nuevo.",
+      "validation_error": "Por favor corrige los errores a continuación",
+      "name_error": "Por favor ingresa tu nombre (al menos 2 caracteres)",
+      "email_error": "Por favor ingresa un correo electrónico válido",
+      "message_error": "Por favor ingresa un mensaje (al menos 10 caracteres)"
+    }
+  }
+}
