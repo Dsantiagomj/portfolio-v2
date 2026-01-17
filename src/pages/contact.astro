@@ -1,10 +1,19 @@
---- 
-import { ContactForm } from '@/components/ContactForm'
-import BaseLayout from '@/layouts/BaseLayout.astro'
-const pageTitle = 'Contact'
-const heroTitle = "Let's talk"
-const heroDescription ='We can discuss about that amazing project in mind or simply say hi'
---- 
-<BaseLayout pageTitle={pageTitle} title={heroTitle} description={heroDescription}>
-  <ContactForm />
+---
+import { ContactForm } from "@/components/ContactForm";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+const pageTitle = "Contact";
+const heroTitle = "Let's talk";
+const heroDescription =
+    "We can discuss about that amazing project in mind or simply say hi";
+const description =
+    "Get in touch with Daniel Santiago Muñoz for web development opportunities, collaborations, or consultations. Available for freelance and contract work.";
+---
+
+<BaseLayout
+    pageTitle={pageTitle}
+    title={heroTitle}
+    description={description}
+    heroDescription={heroDescription}
+>
+    <ContactForm />
 </BaseLayout>

@@ -16,12 +16,12 @@ export function Navbar() {
   const [isHover, setIsHover] = React.useState(false);
 
   return (
-    <nav className="pt-8 pl-4 pr-4 mb-8">
+    <nav className="pt-8 pl-4 pr-4 mb-8" aria-label="Main navigation">
       <div className="container mx-auto max-w-3xl">
         <div className="flex justify-between">
           <div className="flex flex-none group items-center" onMouseEnter={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}>
-            <a href="/">
+            <a href="/" aria-label="Daniel Santiago MJ - Home">
               <span className="flex">
                 <span className="transform group-hover:rotate-45 transition duration-300 ease-in-out ">
                   {isHover ? <CodeXml /> : <Code />}
@@ -35,17 +35,13 @@ export function Navbar() {
           <div className="hidden lg:flex justify-around ">
             <ul className="flex justify-evenly w-52 min-w-52 items-center">
               <li>
-                <a href="/about" >
-                  <Button variant="link">
-                    About
-                  </Button>
+                <a href="/about" className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                  About
                 </a>
               </li>
               <li>
-                <a href="/contact">
-                  <Button variant="link">
-                    Contact
-                  </Button>
+                <a href="/contact" className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                  Contact
                 </a>
               </li>
             </ul>
@@ -64,16 +60,16 @@ export function Navbar() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <a href="/about" className="text-center">
-                  <DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="/about" className="text-center cursor-pointer">
                     About
-                  </DropdownMenuItem>
-                </a>
-                <a href="/contact">
-                  <DropdownMenuItem href="/contact">
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="/contact" className="cursor-pointer">
                     Contact
-                  </DropdownMenuItem>
-                </a>
+                  </a>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>

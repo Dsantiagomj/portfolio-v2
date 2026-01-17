@@ -1,82 +1,137 @@
 ---
-import "@/styles/global.css"
+import "@/styles/global.css";
 
-import Hero from "@/components/Hero.astro"
-import Footer from "@/components/Footer.astro"
-import { Navbar } from "@/components/Navbar.jsx"
-import Analytics from '@vercel/analytics/astro'
+import Hero from "@/components/Hero.astro";
+import Footer from "@/components/Footer.astro";
+import { Navbar } from "@/components/Navbar.jsx";
+import Analytics from "@vercel/analytics/astro";
 
-const { pageTitle, title, description } = Astro.props;
---- 
+const {
+    pageTitle,
+    title,
+    description,
+    heroDescription = description,
+} = Astro.props;
+---
 
 <script is:inline>
-	const getThemePreference = () => {
-		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-			return localStorage.getItem('theme');
-		}
-		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-	};
-	const isDark = getThemePreference() === 'dark';
-	document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
- 
-	if (typeof localStorage !== 'undefined') {
-		const observer = new MutationObserver(() => {
-			const isDark = document.documentElement.classList.contains('dark');
-			localStorage.setItem('theme', isDark ? 'dark' : 'light');
-		});
-		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-	}
+    const getThemePreference = () => {
+        if (
+            typeof localStorage !== "undefined" &&
+            localStorage.getItem("theme")
+        ) {
+            return localStorage.getItem("theme");
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+    };
+    const isDark = getThemePreference() === "dark";
+    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+    if (typeof localStorage !== "undefined") {
+        const observer = new MutationObserver(() => {
+            const isDark = document.documentElement.classList.contains("dark");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ["class"],
+        });
+    }
 </script>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle} - Daniel Santiago MJ | Web developer portfolio</title>
-    <meta name="description" content="Discover Daniel Santiago Muñoz Jaramillo, a skilled web developer main focused on the frontend with leading and teaching experience." />
-    <meta name="author" content="Daniel Santiago Muñoz" />
-    <meta name="author" content="dsantiagomj" />
-    <link rel="canonical" href="https://www.dsantiagomj.dev/" />
-    <meta name="keywords" content="Frontend Developer, Web Developer Portfolio, Daniel Santiago Muñoz Jaramillo Portfolio." />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Daniel Santiago MJ | Web developer portfolio" />
-    <meta property="og:description" content="Explore Daniel Santiago MJ's professional portfolio showcasing innovative web design and development projects." />
-    <meta property="og:url" content="https://www.dsantiagomj.dev/" />
-    <meta property="og:type" content="website" />
-    <script type="application/ld+json" is:inline>
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Daniel Santiago Muñoz Jaramillo",
-      "url": "https://www.dsantiagomj.dev/",
-      "sameAs": [
-        "https://www.linkedin.com/in/dsantiagomj",
-        "https://github.com/dsantiagomj",
-        "https://twitter.com/dsmunozj"
-      ],
-      "jobTitle": "Frontend Developer & Web Developer",
-      "image": "https://www.dsantiagomj.dev/profile.jpg",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Zemoga"
-      }
-    }
-  </script>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>
+            {pageTitle} - Daniel Santiago MJ | Web developer portfolio
+        </title>
+        <meta name="description" content={description} />
+        <meta name="author" content="Daniel Santiago Muñoz" />
+        <meta name="author" content="Daniel Santiago Muñoz Jaramillo" />
+        <meta name="author" content="Dsmj" />
+        <link rel="canonical" href={Astro.url} />
+        <meta
+            name="keywords"
+            content="Frontend Developer, Web Developer Portfolio, Daniel Santiago Muñoz Jaramillo Portfolio."
+        />
+        <meta name="robots" content="index, follow" />
 
-  </head>
-  <body>
-      <a href="#main-content" class="sr-only">
-        Skip to main content
-      </a>
-      <Navbar client:load/>
-    <main id="main-content" class="pl-4 pr-4 container mx-auto max-w-3xl">
-        <Hero title={title} description={description}/>
-        <slot />
-        <Footer/>
-      </main>
-      <Analytics />
-  </body>
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta
+            property="og:title"
+            content={`${pageTitle} - Daniel Santiago Muñoz Jaramillo`}
+        />
+        <meta property="og:description" content={description} />
+        <meta
+            property="og:image"
+            content={new URL("/og-image.png", Astro.site)}
+        />
+        <meta property="og:locale" content="en_US" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta
+            property="twitter:title"
+            content={`${pageTitle} - Daniel Santiago Muñoz Jaramillo`}
+        />
+        <meta property="twitter:description" content={description} />
+        <meta
+            property="twitter:image"
+            content={new URL("/og-image.png", Astro.site)}
+        />
+        <meta property="twitter:creator" content="@dsmunozj" />
+        <script type="application/ld+json" is:inline>
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://www.dsmj.dev/#website",
+                        "url": "https://www.dsmj.dev/",
+                        "name": "Daniel Santiago Muñoz Jaramillo Portfolio",
+                        "description": "Professional portfolio of Daniel Santiago Muñoz Jaramillo, Web Developer",
+                        "inLanguage": "en-US",
+                        "publisher": {
+                            "@id": "https://www.dsantiagomj.dev/#person"
+                        }
+                    },
+                    {
+                        "@type": "Person",
+                        "@id": "https://dsmj.dev/#person",
+                        "name": "Daniel Santiago Muñoz Jaramillo",
+                        "url": "https://dsmj.dev/",
+                        "sameAs": [
+                            "https://www.linkedin.com/in/dsantiagomj",
+                            "https://github.com/dsantiagomj",
+                            "https://twitter.com/dsmunozj"
+                        ],
+                        "jobTitle": "Sr Web Developer",
+                        "image": "https://dsmj.dev/profile.webp",
+                        "worksFor": {
+                            "@type": "Organization",
+                            "name": ".Monks"
+                        }
+                    }
+                ]
+            }
+        </script>
+    </head>
+    <body>
+        <a href="#main-content" class="sr-only"> Skip to main content </a>
+        <Navbar client:idle />
+        <main id="main-content" class="pl-4 pr-4 container mx-auto max-w-3xl">
+            <Hero title={title} description={heroDescription} />
+            <slot />
+            <Footer />
+        </main>
+        <Analytics />
+    </body>
 </html>
-
