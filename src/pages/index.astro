@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ChevronRight, Download, Github, Linkedin, Mail } from 'lucide-react'
 const pageTitle = 'Home'
 const heroTitle='< Hello world />'
-const heroDescription=" I'm a web developer based in colombia"
+const heroDescription=" I'm a web developer based in Colombia"
 --- 
 <BaseLayout pageTitle={pageTitle} title={heroTitle} description={heroDescription}>
   <div class="container md:flex mx-auto max-w-xl px-4 py-2 mb-4 items-center justify-between">
@@ -22,27 +22,23 @@ const heroDescription=" I'm a web developer based in colombia"
   </div>
   <div class="container mx-auto max-w-xl text-center">
       <h2 class="text-2xl text-start font-bold mb-2"> Intro</h2>
-      <p class="pl-2 text-justify"> 
+      <p class="pl-2 text-justify">
           I&apos;m a software developer based in Barranquilla, Colombia with a passion for
           building digital services/stuff. A fan of learning and
-          interacting with new technologies. when i&apos;m not online, i love to
-          play videogames, play football and expend time with my dogs and cat.
+          interacting with new technologies. When I&apos;m not online, I love to
+          play videogames, play football and spend time with my dogs and cat.
     </p>
     <h3 class="text-lg font-bold mt-3 mb-2">
       Learn more about me
     </h3>
-    <section class="flex justify-evenly mx-auto items-center flex-col md:flex-row">
-     <a class="flex items-center" href="https://docs.google.com/document/d/1gNzzFDvFDE_7reufsQt8Oqi4ozO_--AHzdryvmtXcXA/export?format=pdf">
-        <Button variant="outline">
-          Download cv <Download size={16} />
-        </Button>
+    <section class="flex justify-evenly mx-auto items-center flex-col md:flex-row gap-2">
+      <a class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="https://docs.google.com/document/d/1gNzzFDvFDE_7reufsQt8Oqi4ozO_--AHzdryvmtXcXA/export?format=pdf">
+        Download CV <Download size={16} />
       </a>
       <span>or</span>
-      <a class="flex items-center" href="/about">
-        <Button variant="outline">
-          Check profile <ChevronRight size={16} />  
-        </Button>
-      </a> 
+      <a class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="/about">
+        Check profile <ChevronRight size={16} />
+      </a>
     </section>
   </div>
   <div class="container text-center mx-auto max-w-xl py-2 mt-8">
@@ -50,7 +46,7 @@ const heroDescription=" I'm a web developer based in colombia"
       Work
     </h2>
     <p class="text-justify pl-2 mb-8">
-      Companies i've worked with and projects i've been involved with as dev and teacher.
+      Companies I've worked with and projects I've been involved with as dev and teacher.
       Contact me to learn more about those projects.
     </p>
     <div class="grid md:grid-cols-3 gap-4 grid-cols-2 mb-2 px-2 items-center justify-items-center">
@@ -79,36 +75,28 @@ const heroDescription=" I'm a web developer based in colombia"
     <p class="text-justify pl-2">
       You have a project in mind or just want to say hi? Feel free to drop me a message.
     </p>
-    <a href="/contact">
-      <Button variant="outline">
-        Get in touch <ChevronRight size={16} />
-      </Button>
+    <a class="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="/contact">
+      Get in touch <ChevronRight size={16} />
     </a>
   </div>
-  <div class="containter mx-auto max-w-xl py-2 my-4">
+  <div class="container mx-auto max-w-xl py-2 my-4">
     <h2 class="text-2xl text-start font-bold mb-2">
       Online
     </h2> 
     <ul class="pl-2 pt-2">
       <li class="mb-1">
-        <a href="mailto:dsantiagomj@gmail.com">
-          <Button variant="ghost">
-            <Mail size={16} /> Mail
-          </Button>
+        <a class="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="mailto:dsantiagomj@gmail.com">
+          <Mail size={16} /> Mail
         </a>
       </li>
       <li class="mb-1">
-        <a href="https://www.linkedin.com/in/dsantiagomj" target="_blank">
-          <Button variant="ghost">
-            <Linkedin size={16} /> Linkedin
-          </Button>
+        <a class="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="https://www.linkedin.com/in/dsantiagomj" target="_blank" rel="noopener noreferrer">
+          <Linkedin size={16} /> Linkedin
         </a>
       </li>
       <li>
-        <a href="https://github.com/Dsantiagomj" target="_blank">
-          <Button variant="ghost">
-            <Github size={16} /> Github
-          </Button>
+        <a class="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" href="https://github.com/Dsantiagomj" target="_blank" rel="noopener noreferrer">
+          <Github size={16} /> Github
         </a>
       </li>
     </ul> 

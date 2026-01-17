@@ -36,40 +36,46 @@ export function ContactForm() {
           <CardContent>
             <div class="md:flex md:justify-between md:items-center">
               <div class="mb-4">
-                <Label>
+                <Label htmlFor="contact-name">
                   Your name
-                  <Input
-                    type="text"
-                    placeholder="Enter your name"
-                    required
-                    className="mt-2 md:w-72"
-                    name="name"
-                  />
                 </Label>
+                <Input
+                  id="contact-name"
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                  className="mt-2 md:w-72"
+                  name="name"
+                  aria-required="true"
+                />
               </div>
               <div class="mb-4">
-                <Label>
+                <Label htmlFor="contact-email">
                   Your email
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    required
-                    className="mt-2 md:w-72"
-                    name="email"
-                  />
                 </Label>
+                <Input
+                  id="contact-email"
+                  type="email"
+                  placeholder="Enter your email"
+                  required
+                  className="mt-2 md:w-72"
+                  name="email"
+                  aria-required="true"
+                />
               </div>
             </div>
             <div class="mb-2">
-              <Label>
+              <Label htmlFor="contact-message">
                 Your message
-                <Textarea
-                  placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
-                  required
-                  className="mt-2"
-                  name="message"
-                />
               </Label>
+              <Textarea
+                id="contact-message"
+                placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
+                required
+                className="mt-2"
+                name="message"
+                aria-required="true"
+              />
             </div>
           </CardContent>
           <CardFooter className="justify-center">
