@@ -33,11 +33,18 @@ const {
         document.documentElement.classList[isDark ? "add" : "remove"]("dark");
     };
 
-    // Apply theme on initial load
+    // Apply theme immediately
     applyTheme();
 
-    // Re-apply theme after View Transitions
-    document.addEventListener('astro:after-swap', applyTheme);
+    // Persist theme before View Transition swaps the DOM
+    document.addEventListener('astro:before-swap', (ev) => {
+        // Apply theme to the new document before it's swapped in
+        const isDark = getThemePreference() === "dark";
+        ev.newDocument.documentElement.classList[isDark ? "add" : "remove"]("dark");
+    });
+
+    // Also apply on page load (for initial loads and history navigation)
+    document.addEventListener('astro:page-load', applyTheme);
 
     if (typeof localStorage !== "undefined") {
         const observer = new MutationObserver(() => {
