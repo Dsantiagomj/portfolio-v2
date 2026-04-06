@@ -21,7 +21,7 @@
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
     "@vercel/analytics": "^1.6.1",
-    "astro": "^5.16.7",
+    "astro": "^5.18.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.5.2",
